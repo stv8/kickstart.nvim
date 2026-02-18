@@ -190,6 +190,11 @@ vim.diagnostic.config {
 
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Buffer navigation
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<leader>x', ':bd<CR>', { desc = 'Close buffer' })
+
 -- new line on shift enter
 vim.keymap.set('n', '<CR>', 'm`o<Esc>``')
 vim.keymap.set('n', '<S-CR>', 'm`O<Esc>``')
